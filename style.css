@@ -93,7 +93,39 @@ h1 {
 
 /* Current Weather Display Styling */
 
-.weatherData {
-
+.currentWeather {
+    width: 100%;
 }
 
+.weatherData {
+    display: flex;
+    border: 3px solid #212a7a;
+    border-radius: 10px;
+    padding: 20px 300px 20px 20px;
+    margin-left: 70px;
+    justify-content: space-between;
+}
+
+.currentWeather h2 {
+    font-size: larger;
+    font-weight: 700;
+}
+
+.weatherData h4 {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Icon display styling */
+
+.currentWeather .icon img {
+    display: flex;
+    max-width: 50px;
+    margin-top: -115px;
+    margin-left: 220px;
+}
+
+.currentWeather .icon h4 {
+    margin-top: 75px;
+}
