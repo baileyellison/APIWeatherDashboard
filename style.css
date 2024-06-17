@@ -14,7 +14,7 @@ body {
 }
 
 h1 {
-    color:#F1FAFF;
+    color: #F1FAFF;
     background: linear-gradient(0.25turn, #0ea5e9, #055BA9, #212a7a);
     font-size: 1.75rem;
     font-weight: 900;
@@ -23,7 +23,7 @@ h1 {
 }
 
 /* Location Search Styling */
-.container {
+#topContainer {
     display: flex;
     gap: 35px;
     padding: 20px;
@@ -34,7 +34,7 @@ h1 {
 }
 
 .weatherInput input {
-    width:100%;
+    width: 100%;
     height: 40px;
     padding: 0 20px;
     margin: 10px 0;
@@ -94,14 +94,15 @@ h1 {
 /* Current Weather Display Styling */
 
 .currentWeather {
-    width: 80%;
+    width: 60%;
 }
 
 .weatherData {
     display: flex;
+    width: 60%;
     border: 3px solid #212a7a;
     border-radius: 10px;
-    padding: 20px 300px 20px 20px;
+    padding: 20px 0px 20px 20px;
     margin-left: 20px;
     margin-top: 20px;
     justify-content: space-between;
@@ -124,38 +125,51 @@ h1 {
     display: flex;
     max-width: 50px;
     margin-top: -115px;
-    margin-left: 220px;
+    margin-left: 450px;
 }
 
 .currentWeather .icon h4 {
-    margin-top: 75px;
+    font-weight: bold;
+    color: #212a7a;
+    margin-top: 30px;
+    margin-left: 460px;
 }
 
 /* Daily Forecast and weather card Styling */
+
 .dailyForecast {
-    margin-left: 340px;
+    padding: 20px 300px 20px 20px;
+    margin-left: 500px;
+    justify-content: space-between;
     width: 80%;
 }
 
 .dailyForecast h2 {
-    margin: 15px 0;
+    margin: 15px;
     font-size: large;
     display: flex;
     justify-content: space-between;
 }
 
-.fivecast {
+#bottomContainer {
     display: flex;
-    justify-content: space-between;
-    width: calc(100%/5);
-    gap: 20px;
 }
 
 .weather-cards {
+    width: max-content;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.weather-cards .card {
     background-color: #212a7a;
     color: #F1FAFF;
     border-radius: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-items: flex-end;
     padding: 15px;
+    margin: 20px;
     list-style: none;
 }
 
@@ -176,59 +190,77 @@ h1 {
 }
 
 /* Media queries */
- @media (max-width: 1400px) {
+@media (max-width: 1400px) {
     .currentWeather {
         padding: 20px
     }
-    .weather-cards .card {
+
+    .weather-cards {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: calc(100%/3 -20px);
+    }
+}
+
+@media (max-width: 1200px) {
+    .dailyForecast {
+        padding: 0px;
+        margin-left: 250px;
+        justify-content: center;
+        align-items: center;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
     }
-}
-@media (max-width: 1200px) {
-    .weather-cards .card {
+
+    .weather-cards {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        margin-left: 0px;
         width: calc(100%/3 -15px);
     }
 }
+
 @media (max-width: 950px) {
     .currentWeather {
         display: block;
         justify-content: center;
         text-align: center;
     }
+
     .weatherInput {
         width: 450px;
     }
+
+    .weatherInput h3 {
+        text-align: center;
+    }
+
     .dailyForecast {
         justify-content: center;
         margin-left: 20px;
         display: flex;
         flex-wrap: wrap;
     }
+
     .dailyForecast h2 {
         display: block;
         margin: auto;
         justify-content: center;
         align-items: center;
     }
-    .fivecast {
-        display: inline-block;
-        width: 300px;
-    }
+
     .weather-cards {
         margin: 20px;
+        width: calc(100%/2 -10px);
     }
+
     .weather-cards .card {
         margin-left: 0px;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        width: calc(100%/2 -10px);
     }
 }
 
@@ -239,13 +271,16 @@ h1 {
         display: flex;
         flex-wrap: wrap;
     }
+
     .fivecast {
         display: block;
         width: 300px;
     }
+
     .weather-cards {
         margin: 20px;
     }
+
     .weather-cards .card {
         margin-left: 0px;
         display: flex;
@@ -253,18 +288,22 @@ h1 {
         flex-direction: column;
         width: calc(100%/2 -10px);
     }
+
     .weatherData {
         width: 80%;
+        margin-left: 75px;
         align-items: center;
         align-content: center;
         justify-content: center;
     }
+
     .container {
         display: flex;
         flex-wrap: wrap;
         padding: 15px;
     }
+
     .weatherInput {
         width: 100%;
     }
-} 
+}

@@ -16,11 +16,11 @@
 
 <body>
     <h1>Weather Dashboard</h1>
-    <div class="container">
+    <div id="topContainer" class="container">
         <!-- Left Location Search -->
         <div class="weatherInput">
             <h3>Search for a City:</h3>
-            <input type="text" placeholder="Orlando, Cape Town, Hong Kong">
+            <input class="city-input" type="text" placeholder="Orlando, Cape Town, Hong Kong">
             <button class="search-btn">Search</button>
             <div class="separator"></div>
             <button class="location-btn">Use current location</button>
@@ -29,14 +29,10 @@
         <div class="weatherData">
             <div class="currentWeather">
                 <div class="currentWeather-details">
-                    <h2>Raleigh (05/27/2024)</h2>
-                    <h4>Temperature: 77°F</h4>
-                    <h4>Wind: 10 mph</h4>
-                    <h4>Humidity: 96%</h4>
-                </div>
-                <div class="icon">
-                    <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weatherIcons">
-                    <h4>Overcast</h4>
+                    <h2>___________ (_________)</h2>
+                    <h4>Temp: ___°C</h4>
+                    <h4>Wind: ___ mps</h4>
+                    <h4>Humidity: __%</h4>
                 </div>
             </div>
         </div>
@@ -44,51 +40,37 @@
     <!-- Daily Forecast -->
     <div class="dailyForecast">
         <h2>5 Day Weather Forecast</h2>
-    <div class=container>
-        <div class="fivecast">
+        <div id="bottomContainer" class=container>
             <ul class="weather-cards">
                 <li class="card">
-                    <h3>(05/27/2024)</h3>
-                    <img src="https://openweathermap.org/img/wn/10d@4x.png" alt="weatherIcons">
-                    <h4>Temp: 77°F</h4>
-                    <h4>Wind: 10 mph</h4>
-                    <h4>Humidity: 96%</h4>
+                    <h3>(_________)</h3>
+                    <h4>Temp: ___°C</h4>
+                    <h4>Wind: ___ mps</h4>
+                    <h4>Humidity: __%</h4>
                 </li>
-            </ul>
-            <ul class="weather-cards">
                 <li class="card">
-                    <h3>(05/27/2024)</h3>
-                    <img src="https://openweathermap.org/img/wn/10d@4x.png" alt="weatherIcons">
-                    <h4>Temp: 77°F</h4>
-                    <h4>Wind: 10 mph</h4>
-                    <h4>Humidity: 96%</h4>
+                    <h3>(_________)</h3>
+                    <h4>Temp: ___°C</h4>
+                    <h4>Wind: ___ mps</h4>
+                    <h4>Humidity: __%</h4>
                 </li>
-            </ul>
-            <ul class="weather-cards">
                 <li class="card">
-                    <h3>(05/27/2024)</h3>
-                    <img src="https://openweathermap.org/img/wn/10d@4x.png" alt="weatherIcons">
-                    <h4>Temp: 77°F</h4>
-                    <h4>Wind: 10 mph</h4>
-                    <h4>Humidity: 96%</h4>
+                    <h3>(_________)</h3>
+                    <h4>Temp: ___°C</h4>
+                    <h4>Wind: ___ mps</h4>
+                    <h4>Humidity: __%</h4>
                 </li>
-            </ul>
-            <ul class="weather-cards">
                 <li class="card">
-                    <h3>(05/27/2024)</h3>
-                    <img src="https://openweathermap.org/img/wn/10d@4x.png" alt="weatherIcons">
-                    <h4>Temp: 77°F</h4>
-                    <h4>Wind: 10 mph</h4>
-                    <h4>Humidity: 96%</h4>
+                    <h3>(_________)</h3>
+                    <h4>Temp: ___°C</h4>
+                    <h4>Wind: ___ mps</h4>
+                    <h4>Humidity: __%</h4>
                 </li>
-            </ul>
-            <ul class="weather-cards">
                 <li class="card">
-                    <h3>(05/27/2024)</h3>
-                    <img src="https://openweathermap.org/img/wn/10d@4x.png" alt="weatherIcons">
-                    <h4>Temp: 77°F</h4>
-                    <h4>Wind: 10 mph</h4>
-                    <h4>Humidity: 96%</h4>
+                    <h3>(_________)</h3>
+                    <h4>Temp: ___°C</h4>
+                    <h4>Wind: ___ mps</h4>
+                    <h4>Humidity: __%</h4>
                 </li>
             </ul>
         </div>
@@ -98,5 +80,6 @@
 <footer>
 
 </footer>
+<script src="./index.js"></script>
 
 </html>
