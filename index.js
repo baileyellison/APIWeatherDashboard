@@ -1,6 +1,6 @@
 const cityInput = document.querySelector(".city-input");
 const searchButton = document.querySelector(".search-btn");
-const locationButton = document.querySelector("location-btn");
+const locationButton = document.querySelector(".location-btn");
 const currentWeatherDiv = document.querySelector(".currentWeather");
 const weatherCardsDiv = document.querySelector(".weather-cards");
 
@@ -92,15 +92,15 @@ const getCityCoordinates = () => {
 const getUserCoordinates = () => {
     navigator.geolocation.getCurrentPosition(
         position => {
-            const { latitiude, longitude } = position.coords;
-            const REVERSE_GEOCODING_URL = `http://api.openweathermap.org/geo/1.0/reverse?lat=${latitiude}&lon=${longitude}&limit=1&appid=${API_KEY}`;
+            const { latitude, longitude } = position.coords;
+            const REVERSE_GEOCODING_URL = `https://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=1&appid=${API_KEY}`;
 
             // Get city name from coordinates through reverse geocoding api key
             fetch(REVERSE_GEOCODING_URL)
                 .then(res => res.json())
                 .then(data => {
                     const { name } = data[0];
-                    getWeatherDetails(name, lat, lon); // Fetch weather details after getting coordinates
+                    getWeatherDetails(name, latitude, longitude); // Fetch weather details after getting coordinates
                 })
                 .catch(() => {
                     alert("Uh oh. There was an error while trying to find the city. Please try again later.");
@@ -114,7 +114,6 @@ const getUserCoordinates = () => {
 }
 
 // Event listener for search button and location button click
-// locationButton.addEventListener("click", getUserCoordinates);
+locationButton.addEventListener("click", getUserCoordinates);
 searchButton.addEventListener("click", getCityCoordinates);
 cityInput.addEventListener("keyup", e => e.key === "Enter" && getCityCoordinates());
-
