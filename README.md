@@ -14,6 +14,8 @@ This web application is composed of HTML, CSS and JavaScript to render a weather
 ## Screenshot + Deployed Application
 [![Screenshot-of-weather-application.png](https://i.postimg.cc/jj6Q4FQn/Screenshot-of-weather-application.png)](https://postimg.cc/gwJZY47G)
 
+[Deployed Application](https://baileyellison.github.io/APIWeatherDashboard/)
+
 ## Usage
 
 When the user accesses the deployed application, there will not be a displayed forecast at first. Once the user searches for a location, the OpenWeather API grabs the longitudinal and latitudinal coordinates for that location and displays the current and future weather for that specific location. When the user selects to use the current location, it grabs the coordinates of the users location and displays the weather for that particular location. The user is able to access the application using different screen sizes and browsers. 
